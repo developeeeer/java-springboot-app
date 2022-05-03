@@ -1,5 +1,11 @@
 create table issues (
-  ID BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  SUMMARY VARCHAR(256) NOT NULL,
-  DESCRIPTION VARCHAR(256) NOT NULL
+id bigint not null primary key AUTO_INCREMENT,
+summary varchar(256) not null ,
+description varchar(256) not null
+);
+
+create table users (
+username varchar(50) not null primary key,
+password varchar(500) not null,
+authority enum('ADMIN', 'USER') not null
 );

@@ -1,6 +1,5 @@
 package com.example.its.web.issues;
 
-import com.example.its.domain.issue.IssueEntity;
 import com.example.its.domain.issue.IssueService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

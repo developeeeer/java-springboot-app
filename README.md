@@ -156,3 +156,22 @@ GET /issues ->
 <div th:include="footer :: copy"></div>
 <div></div>
 ```
+
+# Spring Initializer 導入
+1. Dependencyの追加
+```gradle
+Spring Initializerより生成してコピペ
+implementation 'org.springframework.boot:spring-boot-starter-security'
+testImplementation 'org.springframework.security:spring-security-test'
+```
+2. サーバーを再起動させて動作確認
+ターミナル上に以下のようなログイン用のパスワードが生成されます。（コピペしておく）
+```terminal
+Using generated security password: 34fa3455-6c53-9374-8a7a-35e8a6c91eec
+```
+ローカルホストよりアクセスすると今までアクセスできていたページに認証が必要となっているので認証情報を入力  
+username: user, password: (copy&paste)
+
+# Sessionの管理について
+* セッションIDは推測されにくい形の物を発行する
+* セッションIDは固定化しないようにログイン時などには再発行するようにする
